@@ -162,7 +162,7 @@ Dataset/
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/your-username/Hybrid-Skin-Cancer-Detection.git
+git clone [https://github.com/your-username/Hybrid-Skin-Cancer-Detection.git](https://github.com/SatishSwami/Hybrid-Skin-Cancer-Detection-using-ABCD-Parameters-and-CNN.git)
 ```
 
 ### 2. Open MATLAB
