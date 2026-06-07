@@ -1,74 +1,102 @@
-Hybrid Skin Cancer Detection using ABCD Parameters and CNN
+# 🩺 Hybrid Skin Cancer Detection using ABCD Parameters and CNN
 
-AI-assisted medical image analysis system for automated skin cancer detection using image processing, dermatological ABCD analysis, texture feature extraction, and Convolutional Neural Networks (CNN) in MATLAB.
+An AI-assisted medical image analysis system developed in MATLAB for automated skin cancer detection using image processing, ABCD dermatological analysis, texture feature extraction, and Convolutional Neural Networks (CNN).
 
-📌 Overview
+---
 
-Skin cancer is one of the most common forms of cancer worldwide. Early detection significantly improves treatment outcomes. This project presents a hybrid skin lesion analysis system that combines traditional dermatological ABCD analysis with deep learning-based classification.
+## 📖 Project Overview
 
-The system processes dermoscopic skin lesion images, extracts clinically relevant features, and classifies lesions as Benign or Malignant using a trained CNN model. A user-friendly MATLAB GUI visualizes all preprocessing stages, segmentation results, extracted features, confidence scores, and final predictions.
+Skin cancer is one of the most common cancers worldwide. Early detection plays a crucial role in successful treatment.
 
-🚀 Features
-Image Preprocessing
-Image Resizing
-Grayscale Conversion
-Median Filtering
-Histogram Equalization
-Low Pass Filtering (LPF)
-High Pass Filtering (HPF)
-Frequency Spectrum Analysis
-Lesion Segmentation
-Threshold-Based Segmentation
-Morphological Operations
-Boundary Detection
-Lesion Mask Generation
-Feature Extraction
-ABCD Dermatological Analysis
-Asymmetry (A)
-Border Irregularity (B)
-Color Variation (C)
-Diameter (D)
-Texture Analysis
-Contrast
-Energy
-Homogeneity
-Correlation
-Deep Learning Classification
-Custom CNN Architecture
-Benign vs Malignant Classification
-Confidence Score Prediction
-GUI Visualization
-Original Image
-Preprocessing Outputs
-Segmented Lesion
-Edge Detection
-ABCD Parameters
-Prediction Result
-Confidence Percentage
-🏗 System Architecture
-Input Dermoscopic Image
-            │
-            ▼
-     Preprocessing
-            │
-            ▼
-     Lesion Segmentation
-            │
-            ▼
+This project combines traditional dermatological ABCD analysis with deep learning techniques to classify skin lesions as **Benign** or **Malignant** using dermoscopic images.
+
+The system performs:
+
+- Image Preprocessing
+- Lesion Segmentation
+- ABCD Feature Extraction
+- Texture Analysis
+- CNN-Based Classification
+- GUI-Based Visualization
+
+---
+
+## 🚀 Features
+
+### Image Preprocessing
+- Image Resizing
+- Grayscale Conversion
+- Median Filtering
+- Histogram Equalization
+- Low Pass Filtering (LPF)
+- High Pass Filtering (HPF)
+- Frequency Spectrum Analysis
+
+### Lesion Segmentation
+- Threshold-Based Segmentation
+- Morphological Operations
+- Edge Detection
+- Lesion Mask Generation
+
+### ABCD Analysis
+- Asymmetry
+- Border Irregularity
+- Color Variation
+- Diameter Measurement
+
+### Texture Analysis
+- Contrast
+- Energy
+- Homogeneity
+- Correlation
+
+### Deep Learning Classification
+- Custom CNN Architecture
+- Benign / Malignant Classification
+- Confidence Score Prediction
+
+### MATLAB GUI
+- Original Image Display
+- Preprocessing Outputs
+- Segmentation Results
+- ABCD Parameters
+- Prediction Results
+- Confidence Score
+
+---
+
+## 🏗 System Workflow
+
+```text
+Input Skin Lesion Image
+           │
+           ▼
+    Image Preprocessing
+           │
+           ▼
+    Lesion Segmentation
+           │
+           ▼
     ABCD Feature Extraction
-            │
-            ▼
-     Texture Analysis
-            │
-            ▼
-     CNN Classification
-            │
-            ▼
-    Benign / Malignant
-            │
-            ▼
-       GUI Output
-📂 Project Structure
+           │
+           ▼
+      Texture Analysis
+           │
+           ▼
+    CNN Classification
+           │
+           ▼
+  Benign / Malignant Result
+           │
+           ▼
+         GUI Output
+```
+
+---
+
+## 📂 Project Structure
+
+```text
 SkinCancerProject/
 │
 ├── preprocess.m
@@ -80,111 +108,194 @@ SkinCancerProject/
 ├── trainedCNN.mat
 │
 ├── Dataset/
-│      ├── Benign/
-│      └── Malignant/
+│   ├── Benign/
+│   └── Malignant/
 │
 └── README.md
-🛠 Technologies Used
-MATLAB
-Image Processing Toolbox
-Deep Learning Toolbox
-Computer Vision Techniques
-Convolutional Neural Networks (CNN)
-Medical Image Processing
-📊 Dataset
+```
 
-The model is trained using dermoscopic skin lesion datasets containing benign and malignant lesion images.
+---
 
-Example datasets:
+## 🛠 Technologies Used
 
-ISIC Archive
-HAM10000 Dataset
+- MATLAB
+- Image Processing Toolbox
+- Deep Learning Toolbox
+- Computer Vision
+- Convolutional Neural Networks (CNN)
+- Medical Image Processing
 
-Dataset Structure:
+---
 
+## 📊 Dataset
+
+The model is trained using dermoscopic skin lesion images containing:
+
+- Benign Lesions
+- Malignant Lesions
+
+### Recommended Datasets
+
+- ISIC Dataset
+- HAM10000 Dataset
+
+### Dataset Structure
+
+```text
 Dataset/
 │
 ├── Benign/
-│      ├── image1.jpg
-│      ├── image2.jpg
-│      └── ...
+│   ├── image1.jpg
+│   ├── image2.jpg
+│   └── ...
 │
 └── Malignant/
-       ├── image1.jpg
-       ├── image2.jpg
-       └── ...
-⚙ Installation
-Clone Repository
-git clone https://github.com/yourusername/Hybrid-Skin-Cancer-Detection.git
-Open MATLAB
+    ├── image1.jpg
+    ├── image2.jpg
+    └── ...
+```
+
+---
+
+## ⚙ Installation
+
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/your-username/Hybrid-Skin-Cancer-Detection.git
+```
+
+### 2. Open MATLAB
 
 Open the project folder in MATLAB.
 
-Train CNN Model
+### 3. Train CNN Model
 
 Run:
 
+```matlab
 trainCNN
+```
 
 This generates:
 
+```text
 trainedCNN.mat
-▶ Running the Application
+```
 
-Launch GUI:
+---
 
+## ▶ Run Application
+
+Launch the GUI:
+
+```matlab
 SkinCancerGUI
+```
 
-Steps:
+### Steps
 
-Click Upload & Analyze Image
-Select a skin lesion image
-View preprocessing stages
-View lesion segmentation
-Analyze ABCD parameters
-Get CNN prediction and confidence score
-📈 Sample Outputs
-Preprocessing Results
-Original Image
-Grayscale Image
-Median Filtered Image
-Enhanced Image
-LPF Output
-HPF Output
-Frequency Spectrum
-Segmentation Results
-Lesion Mask
-Edge Detection
-Final Analysis
+1. Click Upload & Analyze Image
+2. Select a skin lesion image
+3. View preprocessing outputs
+4. View segmentation result
+5. Analyze ABCD parameters
+6. Get CNN prediction and confidence score
+
+---
+
+## 📈 Sample Output
+
+```text
 Prediction : Malignant
 
 Confidence : 94.72%
 
 Asymmetry : 0.63
-Border : 2.14
-Color : 0.57
-Diameter : 6.85 mm
-🎯 Applications
-Computer-Aided Diagnosis (CAD)
-Skin Lesion Screening
-Medical Image Analysis
-Healthcare AI Systems
-Dermatology Research
-Educational Demonstrations
-🔮 Future Enhancements
-Multi-class lesion classification
-Melanoma stage prediction
-Transfer Learning (ResNet, AlexNet, GoogLeNet)
-Cloud-based deployment
-Real-time mobile application
-Explainable AI (XAI) integration
-👨‍💻 Author
+Border     : 2.14
+Color      : 0.57
+Diameter   : 6.85 mm
+```
 
-Satish Swami
+---
 
-Electronics & Telecommunication Engineering
+## 🖼 GUI Preview
+
+Add your screenshots inside an `assets` folder.
+
+```text
+assets/
+├── gui_output.png
+├── workflow.png
+├── segmentation_result.png
+```
+
+Then add:
+
+```markdown
+## GUI Preview
+
+![GUI](assets/gui_output.png)
+
+## Workflow
+
+![Workflow](assets/workflow.png)
+```
+
+---
+
+## 🎯 Applications
+
+- Computer-Aided Diagnosis (CAD)
+- Skin Cancer Screening
+- Medical Image Analysis
+- Healthcare AI Systems
+- Dermatology Research
+- Educational Demonstrations
+
+---
+
+## 🔮 Future Enhancements
+
+- Multi-Class Lesion Classification
+- Melanoma Stage Prediction
+- Transfer Learning using ResNet50
+- Cloud-Based Deployment
+- Mobile Application Support
+- Explainable AI (XAI)
+
+---
+
+## 🧠 Key Skills Demonstrated
+
+- Medical Image Processing
+- Deep Learning
+- Computer Vision
+- CNN Architecture Design
+- MATLAB Programming
+- Feature Extraction
+- Image Segmentation
+- GUI Development
+- Pattern Recognition
+- Healthcare AI
+
+---
+
+## 👨‍💻 Author
+
+**Satish Swami**
+
+Electronics & Telecommunication Engineering  
 MIT Academy of Engineering (MITAOE)
 
-📜 License
+---
 
-This project is intended for educational, research, and academic purposes only.
+## 📜 License
+
+This project is intended for educational and research purposes only.
+
+---
+
+## ⭐ Support
+
+If you found this project useful, consider giving the repository a star.
