@@ -221,15 +221,6 @@ Diameter   : 6.85 mm
 
 ## 🖼 GUI Preview
 
-Add your screenshots inside an `assets` folder.
-
-```text
-assets/
-├── gui_output.png
-├── workflow.png
-├── segmentation_result.png
-```
-
 Then add:
 
 ```markdown
@@ -237,9 +228,9 @@ Then add:
 
 ![GUI](assets/gui_output.png)
 
-## Workflow
 
-![Workflow](assets/workflow.png)
+
+![Workflow](assets/gui_output2.png)
 ```
 
 ---
