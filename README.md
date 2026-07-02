@@ -226,11 +226,11 @@ Then add:
 ```markdown
 ## GUI Preview
 
-![GUI](assets/gui_output.png)
+![GUI](gui_output.png)
 
 
 
-![Workflow](assets/gui_output2.png)
+![Workflow](gui_output2.png)
 ```
 
 ---
